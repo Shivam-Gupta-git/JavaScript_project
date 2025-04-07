@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App-Clone</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <div id="navbar">
+      <input type="checkbox" id="check" name="" value="" />
+      <label for="check" id="checkbtn"><i class="fas fa-bars"></i> </label>
+      <div class="logo-box">LOGO</div>
+      <ul>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">Section</a></li>
+        <li class="item"><a href="#">Contact</a></li>
+        <li class="item"><a href="#">Feedback</a></li>
+        <li class="item"><a href="#">About</a></li>
+      </ul>
+      <div class="search-box">
+        <input
+          type="search"
+          id="search-product"
+          placeholder="Search product name here."
+        />
+      </div>
+      <div class="add-to-box">
+        <div class="wishlist">
+          <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+          <div class="wishlist-count"></div>
+        </div>
+        <div class="bag">
+          <a href="bag.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          <div class="bag-count"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main-Container -->
+    <div id="main-container">
+      <div id="categoryList"></div>
+      <div id="items-container"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+    <script src="wishlist.js"></script>
+  </body>
+</html>

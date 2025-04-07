@@ -1,0 +1,318 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    position: relative;
+    overflow: hidden;
+}
+
+#navbar{
+    height: 50px;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0%;
+}
+#navbar ul{
+    display: flex;
+    gap: 60px;
+}
+#navbar ul .font1, .font2, .font3, .font4, .font5{
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+}
+#navbar .box1{
+    height: 200px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+#navbar .font1 a{
+    color: rgb(220, 139, 9);
+    font-size: 1.2vw;
+}
+#navbar .font2 a,
+#navbar .font3 a,
+#navbar .font4 a,
+#navbar .font5 a{
+    color: rgb(63, 168, 161);
+    font-size: 1.2vw;
+}
+#navbar .font1 i,
+#navbar .font2 i,
+#navbar .font3 i,
+#navbar .font4 i,
+#navbar .font5 i{
+    padding: 5px 7px;
+}
+#navbar .font2 a:hover{
+    color: rgb(220, 139, 9);
+    transition: all .5s;
+}
+#check1{
+    display: none;
+}
+#checkbtn1 i{
+    display: none;
+}
+
+#navbar #check1:checked~ul{
+    top: 0%;
+}
+
+#main-container1{
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+#main-container1 .container1{
+    height: 400px;
+    width: 50%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+
+}
+#main-container1 .box1{
+    height: 300px;
+    width: 100%;
+    /* border: 1px solid orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 10px;
+}
+
+#main-container1 .font3{
+    font-size: 2vw;
+    margin-left: 10%;
+}
+
+#main-container1 .font4{
+    font-size: 1.7vw;
+    color: rgb(255, 106, 0);
+   font-family: 'Courier New', Courier, monospace;
+}
+#main-container1 .font5{
+    font-size: 2vw;
+    text-align: start;
+    margin-left: 10%;
+}
+#main-container1 .font6{
+    font-size: 1.7vw;
+    color: rgb(255, 106, 0);
+    font-family: 'Courier New', Courier, monospace;
+    transition: all .5s ease-in-out;
+}
+/* #main-container1 .font6::after{
+    content: "";
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid black;
+    animation: typing 1.5s steps(15) infinite;
+    background-color: white;
+   
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+    }
+} */
+#main-container1 .font7{
+    width: 70%;
+    text-align: start;
+    margin-left: 10%;
+    font-size: 1.2vw;
+    font-weight: 100; 
+}
+
+#main-container1 .box2{
+    height: 100px ;
+    width: 100%;
+    /* border: 1px solid gray; */
+    display: flex;
+    align-items: start;
+}
+#main-container1 .box2 .button1{
+    height: 30px;
+    width: 120px;
+    margin-left: 10%;
+    border-radius: 20px;
+    border: 1px solid rgb(156, 59, 7);
+    background-color: rgb(255, 115, 0);
+    cursor: pointer;
+}
+#main-container1 .box2 .button1 a{
+    text-decoration: none;
+    color: white;
+}
+#main-container1 .container2{
+    height: 400px;
+    width: 50%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+}
+#main-container1 .container2 .box1{
+    height: 400px;
+    width: 90%;
+    border: 1px solid orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main-container1 .container2 .box1 .box1a{
+    height: 250px;
+    width: 250px;
+    border: 1px solid black;
+}
+#main-container1 .container2 .box2{
+    height: 400px;
+    width: 10%;
+    border: 1px solid rgb(198, 166, 107);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#main-container1 .multi-color{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 10px;
+    /* position: relative; */
+
+}
+#main-container1 .box2 .slide-bar{
+    height: 300px;
+    width: 30px;
+    /* background-color: antiquewhite; */
+    position: absolute;
+    margin-top: 100px;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+#main-container1 .slide-bar .btn1{
+    height: 20px;
+    width: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: rgb(4, 246, 246);
+}
+#main-container1 .slide-bar .btn2{
+    height: 20px;
+    width: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: rgb(11, 106, 135);
+}
+#main-container1 .slide-bar .btn3{
+    height: 20px;
+    width: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: rgb(132, 73, 242);
+}
+#main-container1 .slide-bar .btn4{
+    height: 20px;
+    width: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: rgb(9, 202, 138);
+}
+#main-container1 .slide-bar .btn5{
+    height: 20px;
+    width: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: rgb(255, 106, 0);
+}
+#main-container1 .toggle{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+#navbar .about-box{
+    height: 700px;
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+    background-color: antiquewhite;
+    top: 50px;
+    transition: all .5s;
+    z-index: 11;
+}
+
+
+
+@media(max-width:800px){
+    #checkbtn1{
+        display: flex;
+    }
+    #checkbtn1{
+        font-size: 20px;
+        color: blueviolet;
+        line-height: 60px;
+        z-index: "";
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        margin-left: 90%;
+        border: 1px solid gray;
+        border-radius: 10px;
+        margin-right: 20px; 
+        z-index: 1111;
+    }
+    #checkbtn1 i {
+        z-index: 111;
+        display: flex;
+        color: rgb(233, 97, 97);
+        
+    }
+    #navbar ul {
+        height: 660px;
+        width: 100%;
+        position: absolute;
+        left: -0%;
+        top: -1400%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        transition: all .7s;
+        gap: 10px;
+        background-color: rgb(53, 42, 29);
+        z-index: 111;
+    }
+    #navbar .font1 a,
+    #navbar .font2 a{
+        padding: 30px 30px;
+        font-size: 2vw;
+    }
+}

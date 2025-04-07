@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(rgb(45, 45, 234),rgb(198, 167, 167));
+}
+
+#main-container{
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card1, .card2, .card3{
+    height: 340px;
+    width: 300px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front1,
+.back1,
+.front2,
+.back2,
+.front3,
+.back3
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.front1, .front2, .front3{
+    background: linear-gradient(#08aeea, #2af598);
+    z-index: 1;
+}
+
+.back1, .back2, .back3{
+    background: linear-gradient(#efcb3b, #e4e2bc);
+    z-index: 2;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.container1:hover .card1, .container2:hover .card2, 
+.container3:hover .card3{
+    transform: rotateY(180deg);
+}
+
+.container1, .container2, .container3{
+    perspective: 1000px;
+}
+.box1{
+    width: 300px;
+    height: 170px;
+    border-radius: 10px 10px 0px 0px;
+    background: linear-gradient(rgb(240, 71, 71), rgb(121, 47, 47));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box1a{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50px; 
+}
+.box1a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.box2{
+    width: 300px;
+    height: 170px;
+    border-radius: 0px 0px 10px 10px ;
+    background-color: rgb(196, 175, 148);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box2a{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
+.box2 .box2a h1{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 100;
+    
+}
+.box2 .box2a i{
+    font-size: 20px;
+    color: #f8da61;
+}
+.box2b{
+    height: 60px;
+    width: 90%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+   text-align: center;
+}
+.box2b p{
+    font-size: 10px;
+}
+
+.back-b1{
+    width: 100%;
+    height: 90px;
+    display: flex;
+}
+.back-b2{
+    width: 100%;
+    height: 135px;
+}
+.back-b3{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.back-b1a{
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.back-b1a img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+}
+.back-b1b{
+    height: 80px;
+    width: 180px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.back-b1c{
+    height: 25px;
+    width: 150px;
+    display: flex;
+   align-items: center;
+}
+.back-b1c h1{
+    font-size: 20px;
+    font-weight: 100;
+}
+.back-b1c i{
+    font-size: 15px;
+    color: #f99b03;
+}
+.back-b4 i:hover{
+    font-size: 30px;
+    transition: all .2s ease-in-out;
+  
+}
+
+.back-b2 p{
+    font-size: 13px;
+    margin-left: 5px;
+    line-height:px;
+}
+
+.back-b3 .btn1, .btn2{
+    height: 25px;
+    width: 100px;
+    background-color:rgb(239, 228, 228);
+    color: rgb(80, 31, 31);
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgb(239, 228, 228);
+}
+.back-b3 .btn1:hover, .btn2:hover{
+    background-color: rgb(196, 175, 148) ;
+    transition: all .5s ease-in-out;
+}
+.back-b4{
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+.back-b4 i{
+    font-size: 25px;
+    color: #fb9507;
+    cursor: pointer; 
+}
+.back-b4 i:hover{
+    font-size: 30px;
+    transition: all .2s ease-in-out;
+  
+}
+
+
+@media(max-width:880px){
+    #header{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .card1, .card2, .card3{
+        width: 300px;
+    }
+}

@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#navbar{
+    height: 60px;
+    width: 100%;
+    background-color: bisque;
+    position: sticky;
+}
+#navbar ul{
+    display: flex;
+    float: right;
+}
+#navbar ul li{
+    line-height: 60px;
+    padding: 0px 20px;
+    list-style: none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.checkbox{
+    display: flex;
+    float: right;
+    display: none;
+}
+.checkbox i{
+    line-height: 60px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+@media(max-width:900px){
+    #navbar ul{
+        display: none;
+    }
+    .checkbox{
+        display: flex;
+   
+    }
+    #navbar .shivam{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        background-color: rgb(103, 102, 102);
+        width: 100%;
+        height: 340px;
+        gap: 22px;
+    }
+}
+

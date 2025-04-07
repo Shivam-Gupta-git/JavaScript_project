@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#container{
+    height: 800px;
+    width: 100%;
+    background-color: bisque;
+}
+#container .box{
+    height: 200px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+
+}
+.box img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    transition: all linear .2s;
+}
+#container h1{
+    font-size: 5vw;
+    font-weight: 500;
+    color: gray;
+    z-index: 10;
+    mix-blend-mode: difference;
+}

@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#nav{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: antiquewhite;
+}
+
+#items-container{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 10%;
+    justify-content: space-evenly;
+    gap: 30px;
+    position: relative;
+}
+#items-container .item-container{
+    height: auto;
+    width: 250px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(245, 243, 242);
+    cursor: pointer;
+}
+#items-container .item-container:hover{
+    box-shadow: 2px 2px 5px rgba(120, 120, 118, 0.568),
+    0px 0px 1px 2px rgba(115, 113, 113, 0.209),
+    inset 1px 2px 3px rgba(178, 178, 176, 0.179),
+    inset 1px 1px 2px 3px rgba(215, 215, 212, 0.153);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+#items-container .image-container{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid rebeccapurple; */
+}
+
+#items-container .image-box{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .5s ease-in-out; 
+}
+
+#items-container .image-box img{
+    height: 100%;
+    width: 100%;
+}
+
+.button-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button{
+    height: 7px;
+    width: 7px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.wishList-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 90%;
+    height: 30px;
+    text-decoration: none;
+}
+
+.wishList{
+    color: rgb(14, 13, 13);
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.info-container{
+    width: 100%;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.prise-box{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+
+

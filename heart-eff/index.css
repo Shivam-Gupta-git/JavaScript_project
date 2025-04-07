@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#container{
+    height: 800px;
+    width: 100%;
+    background: linear-gradient(rgb(178, 236, 178), rgb(90, 235, 90));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container .main-box{
+    height: 300px;
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+}
+#container .main-box img{
+    height: 100%;
+    width: 100%;
+}
+#container .main-box i{
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgb(239, 7, 7);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform ease 0.5s;
+}

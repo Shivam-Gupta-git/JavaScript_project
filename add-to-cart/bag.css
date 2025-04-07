@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#navbar{
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navbar .logo{
+    height: 50px;
+    width: 7%;
+    border: 1px solid black;
+}
+#navbar .nav-pages{
+    height: 50px;
+    width: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar ul{
+  display: flex;
+  
+}
+#navbar li{
+    list-style: none;
+    padding: 20px;
+}
+#navbar li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+#navbar .search-bar{
+    height: 50px;
+    width: 20%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar .search{
+    height: 30px;
+    width: 100%;
+    background-color: rgb(231, 227, 227);
+    border: none;
+    text-align: center;
+    font-size: 12px;
+}
+#navbar .detels-box{
+    height: 50px;
+    width: 13%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navbar .profile{
+    height: 40px;
+    width: 25%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    
+}
+#navbar .wishlist{
+    height: 40px;
+    width: 25%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+}
+#navbar .bag {
+    height: 40px;
+    width: 25%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    text-decoration: none;
+}
+.bag-item-count{
+    margin-top: -15px;
+    background-color: red;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    text-align: center; 
+}
+
+
+
+.bag-page{
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.bag-items-container{
+    width: 500px;
+}
+.bag-item-container{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gray;
+  margin-top: 10px;
+}
+
+.bag-item-img{
+    width: 150px;
+    height: 180px;
+    margin: 10px;
+}
+.item-right-part{
+  margin-top: 10px;
+  margin-left: -100px;
+}
+.remove-from-cart{
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.summery-container{
+    width: 400px;
+    border: 1px solid rgb(240, 218, 218);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.total-mrp-container{
+   display: flex;
+   justify-content: space-between;
+}
+.discount-mrp-container{
+    display: flex;
+    justify-content: space-between;
+}
+.convenience-fee-container{
+    display: flex;
+    justify-content: space-between;
+}
+.total-amount-container{
+    display: flex;
+    justify-content: space-between;  
+}
+.place-order{
+    margin: 10px;
+    font-size: 20px;
+    border-radius: none;
+}
+

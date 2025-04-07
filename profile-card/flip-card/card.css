@@ -1,0 +1,86 @@
+
+*{
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+  }
+
+ /* scroll section */
+ #header{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+ }
+
+  .box1{
+    height: 400px;
+    width: 300px;
+    border: 1px solid black;
+  }
+  .scroll{
+    display: flex;
+    gap: 20px;
+  }
+
+  .container{
+    height: 400px;
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    border: 1px solid black;
+  }
+
+  .container::-webkit-scrollbar{
+    display: none;
+  }
+ 
+  .card1, .card2, .card3, .card4, .card5{
+    height: 400px;
+    width: 300px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front1,
+.back1,
+.front2,
+.back2,
+.front3,
+.back3,
+.front4,
+.back4,
+.front5,
+.back5
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-family: 'Lobster', cursive;
+    position: absolute;
+}
+
+.front1, .front2, .front3, .front4, .front5{
+    background-color:rgb(231, 231, 186) ;
+    z-index: 1;
+}
+
+.back1, .back2, .back3, .back4, .back5{
+    background-color:burlywood;
+    z-index: 2;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.container1:hover .card1, .container2:hover .card2, 
+.container3:hover .card3,.container4:hover .card4,.container5:hover .card5{
+    transform: rotateY(180deg);
+}
+
+.container1, .container2, .container3, .container4, .container5{
+    perspective: 1000px;
+}
