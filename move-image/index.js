@@ -1,13 +1,28 @@
-let box = document.querySelectorAll(".box")
-box.forEach((shivam)=>{
-  shivam.addEventListener("mouseenter",()=>{
-    shivam.childNodes[3].style.opacity = 1
-  })
-  shivam.addEventListener("mouseleave",()=>{
-    shivam.childNodes[3].style.opacity = 0
-  })
-  shivam.addEventListener("mousemove",(dets)=>{
-    shivam.childNodes[3].style.left = dets.x+"px"
-    shivam.childNodes[3].style.top = dets.y+"px"
-})
-})
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach((box) => {
+    const img = box.querySelector("img");
+
+    // Set background from data-bg attribute
+    const bg = box.getAttribute("data-bg");
+    box.style.setProperty('--bg-image', `url(${bg})`);
+    box.style.backgroundImage = `url(${bg})`; // fallback if you want
+
+    box.addEventListener("mouseenter", () => {
+        img.style.opacity = "1";
+        // also show background via ::before
+        box.style.backgroundImage = `url(${bg})`;
+        box.classList.add('bg-visible');
+    });
+
+    box.addEventListener("mouseleave", () => {
+        img.style.opacity = "0";
+        box.style.backgroundImage = ''; // remove background
+        box.classList.remove('bg-visible');
+    });
+
+    box.addEventListener("mousemove", (e) => {
+        img.style.left = e.clientX + "px";
+        img.style.top = e.clientY + "px";
+    });
+});
