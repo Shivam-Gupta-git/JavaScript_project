@@ -230,3 +230,136 @@ backbtn.addEventListener("click",() =>{
     a.style.scrollBehavior = "smooth";
     a.scrollLeft -= 235;
 });
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('#navbar ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
+
+// Add animation to course cards on scroll
+gsap.from("#container5 .box1a, #container5 .box1b, #container5 .box1c, #container5 .box1d, #container5 .box1e, #container5 .box1f", {
+    opacity: 0,
+    scale: 0.8,
+    y: 50,
+    duration: 0.6,
+    stagger: 0.1,
+    scrollTrigger: {
+        trigger: "#container5",
+        scroller: "body",
+        start: "top 70%",
+        end: "top 30%",
+        scrub: 1
+    }
+});
+
+// Add animation to footer
+gsap.from("#container8 .footer-section", {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: "#container8",
+        scroller: "body",
+        start: "top 80%",
+        end: "top 50%",
+        scrub: 1
+    }
+});
+
+// Add interactive hover effect to buttons
+document.querySelectorAll('.btn1, .btn2').forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+        gsap.to(this, {
+            scale: 1.05,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+    });
+    
+    btn.addEventListener('mouseleave', function() {
+        gsap.to(this, {
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+    });
+});
+
+// Add click interaction to course cards
+document.querySelectorAll('#container5 .box1a, #container5 .box1b, #container5 .box1c, #container5 .box1d, #container5 .box1e, #container5 .box1f').forEach(card => {
+    card.addEventListener('click', function() {
+        // Add a pulse animation on click
+        gsap.to(this, {
+            scale: 0.95,
+            duration: 0.1,
+            yoyo: true,
+            repeat: 1,
+            ease: "power2.inOut"
+        });
+    });
+});
+
+// Add counter animation for stats in container2
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px'
+};
+
+const animateCounter = (element, target) => {
+    let current = 0;
+    const increment = target / 50;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target + (target >= 1000000 ? '+' : target >= 50 ? '+' : '+');
+            clearInterval(timer);
+        } else {
+            const value = Math.floor(current);
+            element.textContent = value + (target >= 1000000 ? '+' : target >= 50 ? '+' : '+');
+        }
+    }, 30);
+};
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const h1 = entry.target.querySelector('h1');
+            const text = h1.textContent;
+            const number = parseInt(text.replace(/[^0-9]/g, ''));
+            if (number && !entry.target.classList.contains('counted')) {
+                entry.target.classList.add('counted');
+                h1.textContent = '0+';
+                setTimeout(() => animateCounter(h1, number), 100);
+            }
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('#container2 .box1, #container2 .box2, #container2 .box3').forEach(box => {
+    statsObserver.observe(box);
+});
+
+// Add parallax effect to container1 image
+gsap.to("#container1 .box2 img", {
+    y: -50,
+    scrollTrigger: {
+        trigger: "#container1",
+        scroller: "body",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1
+    }
+});
